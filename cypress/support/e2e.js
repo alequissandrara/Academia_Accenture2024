@@ -14,7 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+import "./pages/veheicle-data-success.page";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
