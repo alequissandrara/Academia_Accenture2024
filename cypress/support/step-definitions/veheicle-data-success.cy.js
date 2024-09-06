@@ -17,5 +17,5 @@ And("clico em Next", () => {
 });
 
 Then("sou direcionada para a próxima Aba", () => {
-  cy.AbaEnterinsurantData();
+  cy.AbaEnterInsurantData();
 });

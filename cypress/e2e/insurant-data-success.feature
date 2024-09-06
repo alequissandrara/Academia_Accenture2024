@@ -33,5 +33,5 @@ Quando preencho os seguintes campos com os dados do segurador:
   | Website            | Gerado automaticamente  |
   | Picture            | Nenhum ficheiro selecionado |
 E clico em Next
-Então sou direcionada para a próxima Aba
+Então sou direcionada para a Aba Enter Product Data
 

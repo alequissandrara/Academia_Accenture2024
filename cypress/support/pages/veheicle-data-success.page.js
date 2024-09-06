@@ -30,7 +30,7 @@ Cypress.Commands.add("acessarProximaAba", () => {
   cy.get(BTN_NEXT).click();
 });
 
-Cypress.Commands.add("AbaEnterinsurantData", () => {
+Cypress.Commands.add("AbaEnterInsurantData", () => {
   cy.get(STATUS_ABA_INSURANT).should("be.visible");
   cy.get(".idealsteps-nav li.idealsteps-step-active a").should(
     "have.css",
