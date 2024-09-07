@@ -69,7 +69,7 @@ Cypress.Commands.add("acessarProximaAbaProduct", () => {
   cy.get(BTN_NEXT_PRODUCT).click({ force: true });
 });
 
-Cypress.Commands.add("AbaEnterProductData", () => {
+Cypress.Commands.add("abaEnterProductData", () => {
   cy.get(STATUS_ABA_PRODUCT).should("be.visible");
   cy.get(CLASS_CONFIRMACAO).should(
     "have.css",

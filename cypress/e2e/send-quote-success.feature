@@ -55,6 +55,5 @@ Quando preencho os seguintes campos com meus dados válidos:
   | Password           | securepassword         |
   | Confirm Password   | securepassword         |
   | Comments           | Test comment           |
+Então clico em Send confirmando o envio do form
 
-E clico em Send
-Então recebo uma mensagem de confirmação de envio

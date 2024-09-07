@@ -4,8 +4,7 @@ const USERNAME = "#username";
 const PASSWORD = "#password";
 const CONFIRM_PASSWORD = "#confirmpassword";
 const COMMENTS = "#Comments";
-const ENV_COTACAO = "#sendemail";
-/* const CONFIRMACAO_ENVIO ="" */
+const ENV_COTACAO = 'button[id="sendemail"]';
 
 Cypress.Commands.add("preencherDadosCotacao", () => {
   cy.get(EMAIL).type(Cypress.env("email"));
@@ -17,9 +16,5 @@ Cypress.Commands.add("preencherDadosCotacao", () => {
 });
 
 Cypress.Commands.add("enviarCotacao", () => {
-  cy.get(ENV_COTACAO, { timeout: 10000 }).click();
+  cy.get(ENV_COTACAO).click();
 });
-
-/* Cypress.Commands.add("confirmacaoEnvio", () => {
-    cy.get("#confirmation").should("be.visible");
-  }); */

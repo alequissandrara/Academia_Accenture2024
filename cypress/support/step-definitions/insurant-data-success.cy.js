@@ -9,5 +9,5 @@ And("clico em Next", () => {
 });
 
 Then("sou direcionada para a Aba Enter Product Data", () => {
-  cy.AbaEnterProductData();
+  cy.abaEnterProductData();
 });
