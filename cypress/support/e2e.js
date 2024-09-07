@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import "./commands";
 import "./pages/insurant-data-success.page";
+import "./pages/price-option-success.page";
 import "./pages/product-data-success.page";
 import "./pages/veheicle-data-success.page";
 
