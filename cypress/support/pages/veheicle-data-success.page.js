@@ -10,6 +10,7 @@ const NUMBER_OF_SEATS = "#numberofseats";
 const ENGINE_PERFORMANCE = "#engineperformance";
 const DATE_OF_MANUFACTURE = "#dateofmanufacture";
 const LICENSE_PLATE_NUMBER = "#licenseplatenumber";
+const CLASS_CONFIRMACAO = ".idealsteps-nav li.idealsteps-step-active a";
 
 Cypress.Commands.add("acessarAutomobile", () => {
   cy.get(BTN_ACESSA_AUTOMOBILE).click();
@@ -30,9 +31,9 @@ Cypress.Commands.add("acessarProximaAba", () => {
   cy.get(BTN_NEXT).click();
 });
 
-Cypress.Commands.add("AbaEnterinsurantData", () => {
+Cypress.Commands.add("AbaEnterInsurantData", () => {
   cy.get(STATUS_ABA_INSURANT).should("be.visible");
-  cy.get(".idealsteps-nav li.idealsteps-step-active a").should(
+  cy.get(CLASS_CONFIRMACAO).should(
     "have.css",
     "background-color",
     "rgb(249, 249, 248)"
