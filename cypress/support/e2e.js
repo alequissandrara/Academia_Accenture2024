@@ -17,6 +17,7 @@
 import "./commands";
 import "./pages/insurant-data-success.page";
 import "./pages/price-option-success.page";
+import "./pages/product-data-failed.page";
 import "./pages/product-data-success.page";
 import "./pages/send-quote-success.page";
 import "./pages/veheicle-data-success.page";
