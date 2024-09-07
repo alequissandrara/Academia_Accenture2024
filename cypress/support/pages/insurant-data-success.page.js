@@ -46,8 +46,8 @@ Cypress.Commands.add("preencherDadosSegurador", () => {
   const country = Cypress.env("country");
   const zipCode = generateUSZipCode();
   const city = removeAccents(faker.address.city());
-  const occupation = removeAccents(Cypress.env("occupation"));
-  const website = removeAtSymbol(faker.internet.url());
+  const occupation = Cypress.env("occupation");
+  const website = Cypress.env("website");
   const imageUrl = faker.image.avatar();
 
   cy.get(FIRST_NAME, { timeout: 10000 }).type(firstName);

@@ -1,8 +1,8 @@
 #utf-8
 #language: pt
 
-Funcionalidade: Seleção de opção de preço e acesso a próxima aba
-Cenário:  Seleção válida de opção de preço
+Funcionalidade: Inserção dos dados para envio de cotação
+Cenário: Envio de cotação com dados válidos
 
 Dado que acesso o site da Tricentis
 E clico na opção Automobile
@@ -44,6 +44,17 @@ E preencho os seguintes campos com os dados do produto:
   | Courtesy Car      | Yes                  |
 E clico em Next
 E sou direcionada para a Aba Enter Select Price Option
-Quando seleciono a opção Ultimate na aba Select Price Option
+E seleciono a opção Ultimate na aba Select Price Option
 E clico em Next
-Então sou direcionada para a Aba Send Quote
+E sou direcionada para a Aba Send Quote
+Quando preencho os seguintes campos com meus dados válidos:
+  | Campo              | Valor                  |
+  | E-Mail             | test@example.com       |
+  | Phone              | 123-456-7890           |
+  | Username           | testuser               |
+  | Password           | securepassword         |
+  | Confirm Password   | securepassword         |
+  | Comments           | Test comment           |
+
+E clico em Send
+Então recebo uma mensagem de confirmação de envio
