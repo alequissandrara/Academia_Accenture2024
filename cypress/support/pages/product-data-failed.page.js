@@ -1,10 +1,6 @@
 import faker from "faker-br";
 
 /* Constantes da página de Veículo */
-const BTN_NEXT_VEHICLE = "#nextenterinsurantdata";
-const BTN_ACESSO_AUTOMOBILE = "#nav_automobile";
-const STATUS_ABA_VEHICLE = "#enterinsurantdata";
-
 const MAKE = "#make";
 const FUEL_TYPE = "#fuel";
 const LIST_PRICE = "#listprice";
@@ -13,13 +9,8 @@ const NUMBER_OF_SEATS = "#numberofseats";
 const ENGINE_PERFORMANCE = "#engineperformance";
 const DATE_OF_MANUFACTURE = "#dateofmanufacture";
 const LICENSE_PLATE_NUMBER = "#licenseplatenumber";
-const CLASS_CONFIRMACAO_VEHICLE = ".idealsteps-nav li.idealsteps-step-active a";
 
 /* Constantes da página de Segurador */
-const BTN_NEXT_INSURER = "#nextenterproductdata";
-const STATUS_ABA_INSURER = "#enterproductdata";
-const CLASS_CONFIRMACAO_INSURER = ".idealsteps-nav li.idealsteps-step-active a";
-
 const CITY = "#city";
 const WEBSITE = "#website";
 const PICTURE = "#picture";
@@ -48,10 +39,6 @@ const DEFENSE_INSURANCE =
   '#LegalDefenseInsurance[type="checkbox"][value="Yes"]';
 
 /* Função da página de Automóvel */
-Cypress.Commands.add("acessarAutomobile", () => {
-  cy.get(BTN_ACESSO_AUTOMOBILE).click();
-});
-
 Cypress.Commands.add("preencherDadosAutomovelError", () => {
   cy.get(MAKE).select(Cypress.env("make"));
   cy.get(ENGINE_PERFORMANCE).type(Cypress.env("enginePerformanceErro"));
@@ -61,19 +48,6 @@ Cypress.Commands.add("preencherDadosAutomovelError", () => {
   cy.get(LIST_PRICE).type(Cypress.env("listPrice"));
   cy.get(LICENSE_PLATE_NUMBER).type(Cypress.env("licensePlateNumber"));
   cy.get(ANNUAL_MILEAGE).type(Cypress.env("annualMileage"));
-});
-
-Cypress.Commands.add("acessarProximaAbaVeiculo", () => {
-  cy.get(BTN_NEXT_VEHICLE).click();
-});
-
-Cypress.Commands.add("verificarAbaEnterInsurantData", () => {
-  cy.get(STATUS_ABA_VEHICLE).should("be.visible");
-  cy.get(CLASS_CONFIRMACAO_VEHICLE).should(
-    "have.css",
-    "background-color",
-    "rgb(249, 249, 248)"
-  );
 });
 
 /* Função da página de Segurador */
@@ -122,19 +96,6 @@ Cypress.Commands.add("preencherDadosSeguradorError", () => {
   cy.get(CHECKBOX_SPEEDING).click({ force: true });
   cy.get(WEBSITE, { timeout: 10000 }).type(website);
   cy.get(PICTURE).type(imageUrl);
-});
-
-Cypress.Commands.add("acessarProximaAbaSegurador", () => {
-  cy.get(BTN_NEXT_INSURER).click({ force: true });
-});
-
-Cypress.Commands.add("verificarAbaEnterProductData", () => {
-  cy.get(STATUS_ABA_INSURER).should("be.visible");
-  cy.get(CLASS_CONFIRMACAO_INSURER).should(
-    "have.css",
-    "background-color",
-    "rgb(249, 249, 248)"
-  );
 });
 
 /* Função da página de Produto */
