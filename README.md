@@ -44,9 +44,7 @@ https://github.com/user-attachments/assets/56d8cf55-b0cc-4693-b7d6-b015e2550fab
      ```bash
    npx cypress open
    ``````
-## 🎯 Objetivo
 
-Este projeto visa demonstrar a implementação de testes automatizados usando Cypress, assegurando a integridade e a validação correta dos dados em um formulário de cotação.
 
 ## 🔗 Links Úteis
 - [Miro](https://miro.com/welcomeonboard/RmlzUGQ0bmh5UGwyZTlIS21sazRORXo5dFVvSFh5Z21FempFSlhXODNhZlJvQ3B1WVYza1hiUzU4RnF4dHFWanwzNDU4NzY0NTUxMzU3NDYwNTUzfDI=?share_link_id=327239584084)
